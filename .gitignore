@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+revenue-frontend/node_modules/
+
+# Build output
+dist/
+revenue-frontend/dist/
+
+# Environment variables - NEVER commit these
+.env
+*.env
+
+# Database dumps - contain client data
+*.sql
+*.dump
+*.backup
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Uploads / local data files
+*.xlsx
+*.csv
+data/
+
+# Railway
+.railway/
