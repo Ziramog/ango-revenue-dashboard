@@ -188,10 +188,5 @@ app.get("/api/categories/revenue", async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// ── SERVE REACT BUILD ─────────────────────────────────────────────────────
-const distPath = path.join(__dirname, "dist");
-app.use(express.static(distPath));
-app.get("*", (req, res) => res.sendFile(path.join(distPath, "index.html")));
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`✅ Server on port ${PORT}`));
+// ── EXPORT FOR VERCEL ─────────────────────────────────────────────────────
+module.exports = app;
